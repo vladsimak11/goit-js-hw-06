@@ -1,7 +1,6 @@
 const form = document.querySelector('.login-form');
 
-form.addEventListener('submit', onFormSubmit);
-
+form.addEventListener('click', onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -12,8 +11,13 @@ function onFormSubmit(event) {
   if (email.value === "" || password.value === "") {
     return alert(`Заповніть всі поля!`);
   }
-
-  console.log(`Логін: ${email.value}, Пароль: ${password.value}`);
+  
+  console.log(
+   {
+    email: email.value,
+    password: password.value,
+  }
+  );
 
   event.currentTarget.reset();
 };
