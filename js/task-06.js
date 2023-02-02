@@ -3,12 +3,12 @@ let dataLength = input.getAttribute('data-length');
 
 input.addEventListener("blur", (event) => {
   
-  if(event.currentTarget.textLength === Number(dataLength)) {
-    event.currentTarget.classList.add('valid');
-    event.currentTarget.classList.remove('invalid');
+  if(event.target.textLength === Number(dataLength)) {
+    event.target.classList.add('valid');
+    event.target.classList.remove('invalid');
   } else {
-    event.currentTarget.classList.add('invalid');
-    event.currentTarget.classList.remove('valid');
+    event.target.classList.add('invalid');
+    event.target.classList.remove('valid');
   }
 
 });
